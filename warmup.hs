@@ -33,6 +33,7 @@ rovarsprak s = concatMap (\y -> if isConsonant y
 
 karpsravor :: [Char] -> [Char]
 karpsravor [] = []
+-- Pattern matching iterating through the list. x is the head, xs the tail. 
 karpsravor (x:xs) 
     | isConsonant x = x:karpsravor (drop 2 xs) 
     | otherwise = x:karpsravor xs
