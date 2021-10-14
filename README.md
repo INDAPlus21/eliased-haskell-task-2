@@ -1,6 +1,6 @@
-* Svar på frågorna
+## Svar på frågorna
 
-1. Varför kan man skriva utryck så som detta i Haskell?
+### 1. Varför kan man skriva utryck så som detta i Haskell?
 #+BEGIN_SRC haskell
 let evenNumbers = [ 2 * n | n <- [1..]]
 print (take 1000000 evenNumbers)
@@ -12,14 +12,14 @@ Det är möjligt eftersom Haskell använder lazy evaluation (call-by-need), dvs 
 
 Programmet ovan printar en lista med alla jämna tal från 2 till (o med) 2000000. 
 
-2. Vad innebär rekursion? 
+### 2. Vad innebär rekursion? 
 Att en funktion callar sig själv med parametrar som har räknats ut "i funktionens gång", och returnar ett resultat som både är användbart för sig själv samt  returnar (åtminstone) ett slutresultat när en viss condition är uppnådd. Rekursiva funktioner kan t.ex användas för att definiera en oändlig mängd med ett ändligt statement (som ovan; the list comprehension är bara syntatic sugar). 
 
 Exempel på rekursivitet är en shackmotor som gör en rekursiv tree-search och använder resultatet från den evaluatade boardstaten. Ett annnat exempel är fibonnaci-programmen vi skrev till denna uppgift. 
 
 Rekursion används mycket flitigt i Haskell p.g.a avsaknaden av while- och for-loopar. 
 
-// 3. Varför fungerar följande funktion i språk så som haskell och inte i t.ex javascript
+### 3. Varför fungerar följande funktion i språk så som haskell och inte i t.ex javascript
 #+BEGIN_SRC haskell
 sum :: Integral n, Num n => n -> n -> n
 sum s 0 = s
